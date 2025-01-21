@@ -3,29 +3,30 @@
 Desenvolvimento de exercícios de lógica de programação.
 Técnica:
 
-1. Observe o trecho de código abaixo:
-   int INDICE = 13;
-   SOMA = 0, K = 0;
-   Enquanto K < INDICE faça {
-   K = K + 1; SOMA = SOMA + K;
-   }
-   Imprimir(SOMA);
-   Ao final do processamento, qual será o valor da variável SOMA?
-   R: 91
+1.  Observe o trecho de código abaixo:
+    int INDICE = 13;
+    SOMA = 0, K = 0;
+    Enquanto K < INDICE faça {
+    K = K + 1;
+    SOMA = SOMA + K;
+    }
+    Imprimir(SOMA);
+    Ao final do processamento, qual será o valor da variável SOMA?
+    R: 91
 
-   K(0) -> 0 + 1 = 1
-   K(1) -> 1 + 2 = 3
-   K(2) -> 3 + 3 = 6
-   K(3) -> 6 + 4 = 10
-   K(4) -> 10 + 5 = 15
-   K(5) -> 15 + 6 = 21
-   K(6) -> 21 + 7 = 28
-   K(7) -> 28 + 8 = 36
-   K(8) -> 36 + 9 = 45
-   K(9) -> 45 + 10 = 55
-   K(10) -> 55 + 11 = 66
-   K(11) -> 66 + 12 = 78
-   K(12) -> 78 + 13 = 91
+        K(0) -> 0 + 1 = 1
+        K(1) -> 1 + 2 = 3
+        K(2) -> 3 + 3 = 6
+        K(3) -> 6 + 4 = 10
+        K(4) -> 10 + 5 = 15
+        K(5) -> 15 + 6 = 21
+        K(6) -> 21 + 7 = 28
+        K(7) -> 28 + 8 = 36
+        K(8) -> 36 + 9 = 45
+        K(9) -> 45 + 10 = 55
+        K(10) -> 55 + 11 = 66
+        K(11) -> 66 + 12 = 78
+        K(12) -> 78 + 13 = 91
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -66,16 +67,19 @@ Técnica:
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////// 3. Dado um vetor que guarda o valor de faturamento diário de uma distribuidora, faça um programa, na linguagem que desejar, que calcule e retorne:  
- • O menor valor de faturamento ocorrido em um dia do mês;
-• O maior valor de faturamento ocorrido em um dia do mês;
-• Número de dias no mês em que o valor de faturamento diário foi superior à média mensal.
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+3. Dado um vetor que guarda o valor de faturamento diário de uma distribuidora, faça um programa, na linguagem que desejar, que calcule e retorne:  
+   • O menor valor de faturamento ocorrido em um dia do mês;
+   • O maior valor de faturamento ocorrido em um dia do mês;
+   • Número de dias no mês em que o valor de faturamento diário foi superior à média mensal.
 
 IMPORTANTE:
 a) Usar o json ou xml disponível como fonte dos dados do faturamento mensal;
 b) Podem existir dias sem faturamento, como nos finais de semana e feriados. Estes dias devem ser ignorados no cálculo da média;
 
-            const faturamento = [ {"dia": 1,"valor": 22174.1664},
+            const faturamento = [
+            {"dia": 1,"valor": 22174.1664},
             {"dia": 2,"valor": 24537.6698},
             {"dia": 3,"valor": 26139.6134},
             {"dia": 4,"valor": 0.0},
@@ -197,11 +201,13 @@ b) Podem existir dias sem faturamento, como nos finais de semana e feriados. Est
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 4.  Dado o valor de faturamento mensal de uma distribuidora, detalhado por estado:
+
     • SP – R$67.836,43
     • RJ – R$36.678,66
     • MG – R$29.229,88
     • ES – R$27.165,48
     • Outros – R$19.849,53
+
     Escreva um programa na linguagem que desejar onde calcule o percentual de representação que cada estado teve dentro do valor total mensal da distribuidora.
 
          const faturamento = [
@@ -240,7 +246,24 @@ b) Podem existir dias sem faturamento, como nos finais de semana e feriados. Est
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-5. Escreva um programa que inverta os caracteres de um string.
-   IMPORTANTE:
-   a) Essa string pode ser informada através de qualquer entrada de sua preferência ou pode ser previamente definida no código;
-   b) Evite usar funções prontas, como, por exemplo, reverse;
+5.  Escreva um programa que inverta os caracteres de um string.
+    IMPORTANTE:
+    a) Essa string pode ser informada através de qualquer entrada de sua preferência ou pode ser previamente definida no código;
+    b) Evite usar funções prontas, como, por exemplo, reverse;
+
+             function inverte(palavra){
+
+                 var invertida = "";
+
+
+                 for (i = palavra.length - 1; i >= 0; i--) {
+                 invertida += palavra[i];
+                 }
+                 return invertida;
+             }
+
+             const original = ""
+
+
+             console.log("String original: " + original);
+             console.log("String invertida: " + inverte(original));
